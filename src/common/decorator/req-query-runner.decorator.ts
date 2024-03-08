@@ -5,7 +5,7 @@ export const ReqQueryRunner = createParamDecorator((data, context: ExecutionCont
     const req = context.switchToHttp().getRequest()
 
     if (!req.qr) {
-        throw new BadRequestException('반드시 TransactionInterceptor와 함꼐 사용 해야합니다.')
+        throw new BadRequestException('반드시 TransactionInterceptor와 함께 사용 해야합니다.')
     };
 
     return req.qr;
