@@ -84,6 +84,7 @@ export class RidersService {
     }
 
 
+    // 실시간 라이더 대기 시간 로직
     @Cron(CronExpression.EVERY_SECOND)
     async riderWaitingTime() {
 
