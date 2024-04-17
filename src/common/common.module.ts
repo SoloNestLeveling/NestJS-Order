@@ -28,7 +28,7 @@ import { TEMP_FOLDER_PATH } from './const/image-path.const';
       storage: multer.diskStorage({
         destination: function (res, req, fn) {
 
-          fn(null, `/${join(TEMP_FOLDER_PATH)}`)
+          fn(null, TEMP_FOLDER_PATH)
         },
         filename: function (res, file, fn) {
 

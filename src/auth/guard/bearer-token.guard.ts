@@ -80,9 +80,9 @@ export class AccessTokenGuard extends BearerTokenGuard {
             return true;
         }
 
-        if (req.tokenType === 'refresh') {
+        if (req.tokenType !== 'access') {
 
-            throw new UnauthorizedException('토큰 재발급은 오직 refreshToken으로만 가능합니다.')
+            throw new UnauthorizedException('accessToken이 아닙니다.')
         };
 
         return true
@@ -101,7 +101,7 @@ export class refreshTokenGuard extends BearerTokenGuard {
 
         const req = context.switchToHttp().getRequest()
 
-        if (req.tokenType === 'refresh') {
+        if (req.tokenType !== 'refresh') {
 
             throw new UnauthorizedException('토큰 재발급은 오직 refreshToken으로만 가능합니다.')
         };
