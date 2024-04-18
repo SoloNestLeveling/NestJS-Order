@@ -6,7 +6,6 @@ import { CreateMenuDto } from "./dto/create-menu.dto";
 import { MenusService } from "./menus.service";
 import { ImageTypeEnum } from "src/images/enum/image.enum";
 import { Owner } from "src/owners/decorator/owner.decorator";
-import { TransationInterceptor } from "src/common/interceptor/transaction.interceptor";
 import { ReqQueryRunner } from "src/common/decorator/req-query-runner.decorator";
 import { QueryRunner } from "typeorm";
 

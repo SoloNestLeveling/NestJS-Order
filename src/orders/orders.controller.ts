@@ -5,7 +5,6 @@ import { UsersModel } from 'src/users/entity/users.entity';
 import { CreateOrderDto } from './dto/create-order.dto';
 import { AccessTokenGuard } from 'src/auth/guard/bearer-token.guard';
 import { SendOrderDto } from '../users/dto/send-order.dto';
-import { TransationInterceptor } from 'src/common/interceptor/transaction.interceptor';
 import { ReqQueryRunner } from 'src/common/decorator/req-query-runner.decorator';
 import { QueryRunner } from 'typeorm';
 

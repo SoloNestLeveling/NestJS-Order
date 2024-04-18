@@ -3,7 +3,7 @@ import { Observable, catchError, tap } from "rxjs";
 import { DataSource } from "typeorm";
 
 @Injectable()
-export class TransationInterceptor implements NestInterceptor {
+export class TransactionInterceptor implements NestInterceptor {
 
     constructor(
         private readonly dataSource: DataSource
